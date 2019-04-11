@@ -6,8 +6,9 @@ import torch
 import numpy as np
 import os
 
-parser = argparse.ArgumentParser(description='Real-time style transfer with strength control: train model')
-parser.add_argument('--max_train_count', default=1600, type=positive_int, help='training will stop after passing this number of images')
+parser = argparse.ArgumentParser(description='Real-time style transfer with strength control: train model',
+                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+parser.add_argument('--max_train_count', default=160000, type=positive_int, help='training will stop after passing this number of images')
 parser.add_argument('--log_batches_interval', default=80,  type=positive_int, help='number of batches after which the training loss is logged')
 parser.add_argument('--style_image', default='images/styles/la_muse.jpg', help='path to style-image')
 parser.add_argument('--gpu_id', default=0, type=int, help='GPU to use')

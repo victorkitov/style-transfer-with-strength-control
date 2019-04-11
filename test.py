@@ -5,10 +5,11 @@ import torch
 
 import argparse
 
-parser = argparse.ArgumentParser(description='Real-time style transfer with strength control: apply style')
+parser = argparse.ArgumentParser(description='Real-time style transfer with strength control: apply style',
+                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument('--content', nargs='+', default=['images/contents/bus.jpg'], help='sequence of content images to be stylized')
 parser.add_argument('--out_dir', default='images/results/', help='directory where stylized images will be stored')
-parser.add_argument('--model', default='models/la_muse.jpg_160.pth', help='path to serialized model (obtained via train.py)')
+parser.add_argument('--model', default='models/la_muse.pth', help='path to serialized model, obtained via train.py')
 parser.add_argument('--style_strength', default=1, type=non_negative_float, help='non-negative float parameter, controlling stylization strength')
 parser.add_argument('--use_parallel_gpu', default=False, type=bool, help='model trained using single GPU or using parallelization over multiple GPUs')
 parser.add_argument('--gpu_id', default=0, type=int, help='GPU to use')
