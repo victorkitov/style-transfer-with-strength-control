@@ -1,4 +1,4 @@
-# style-transfer-with-strength-control
+# Style transfer with strength control
 This is an extension of [real-time style transfer of Johnson et al. (2016)](https://arxiv.org/abs/1603.08155?context=cs) which lets training a single transformer network for stylization with different stylization strength.
 
 # Functionality
