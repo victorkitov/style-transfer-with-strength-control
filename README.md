@@ -1,5 +1,5 @@
 # Style transfer with strength control
-This is an extension of [real-time style transfer of Johnson et al. (2016)](https://arxiv.org/abs/1603.08155?context=cs) which lets training a single transformer network for stylization with different stylization strength.
+This is a realization of [real-time style transfer (Kitov, 2019)](https://arxiv.org/abs/1904.08643)  which lets training a single transformer network for stylization with different stylization strength.
 
 # Functionality
 Train transformer network once (for each style). Then apply stylizations by passing images with the content through the transformer. Specification of stylization strength allows control of stylization impact at inference time.
